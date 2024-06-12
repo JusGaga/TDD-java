@@ -12,10 +12,10 @@ public class RechercheVille {
         this.villes = villes;
     }
 
-    public List<String> rechercher(String mot) throws ExecutionControl.NotImplementedException {
+    public List<String> rechercher(String mot) {
         if (mot.length() < 2){
             throw new NotFoundException("Le texte de recherche doit contenir au moins 2 caractères.");
         }
-        throw new ExecutionControl.NotImplementedException("");
+        throw new UnsupportedOperationException("Not implemented yet");
     }
 }

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -28,5 +29,10 @@ public class RechercheVilleTest {
         });
     }
 
-
+    @Test
+    public void testRechercheAvecDebutDeNom() {
+        List<String> result = rechercheVille.rechercher("Va");
+        assertTrue(result.contains("Valence"));
+        assertTrue(result.contains("Vancouver"));
+    }
 }
