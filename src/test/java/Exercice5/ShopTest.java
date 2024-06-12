@@ -49,4 +49,12 @@ public class ShopTest {
         shop.update(product);
         assertEquals(21, product.getQuality());
     }
+
+    @Test
+    public void testQualityNeverMoreThanFifty() {
+        Product product = new Product("brie", "Aged Brie", 10, 50);
+        Shop shop = new Shop(List.of(product));
+        shop.update(product);
+        assertEquals(50, product.getQuality());
+    }
 }
