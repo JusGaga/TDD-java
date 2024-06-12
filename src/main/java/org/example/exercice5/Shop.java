@@ -10,7 +10,15 @@ public class Shop {
     }
 
     public void update(Product product) {
+        int qualityChange = 1;
+
         product.setSellIn(product.getSellIn() - 1);
-        product.setQuality(product.getQuality() - 1);
+
+        if(product.getSellIn() <= 0) {
+            qualityChange = 2;
+        }
+
+        product.setQuality(product.getQuality() - qualityChange );
+
     }
 }
