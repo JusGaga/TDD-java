@@ -18,7 +18,13 @@ public class Shop {
             qualityChange = 2;
         }
 
-        product.setQuality(product.getQuality() - qualityChange );
+        int newQuality = product.getQuality() - qualityChange;
+
+        if (newQuality < 0) {
+            newQuality = 0;
+        }
+
+        product.setQuality(newQuality );
 
     }
 }
