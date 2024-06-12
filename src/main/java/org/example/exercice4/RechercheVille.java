@@ -20,7 +20,7 @@ public class RechercheVille {
         String recherche = mot.toLowerCase();
 
         return villes.stream()
-                .filter(ville -> ville.toLowerCase().startsWith(recherche))
+                .filter(ville -> ville.toLowerCase().startsWith(recherche)|| ville.toLowerCase().contains(recherche))
                 .collect(Collectors.toList());
 
     }
