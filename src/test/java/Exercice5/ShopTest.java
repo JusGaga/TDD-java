@@ -57,4 +57,12 @@ public class ShopTest {
         shop.update(product);
         assertEquals(50, product.getQuality());
     }
+
+    @Test
+    public void testDairyProductsDegradeFaster() {
+        Product product = new Product("dairy", "Milk", 10, 20);
+        Shop shop = new Shop(List.of(product));
+        shop.update(product);
+        assertEquals(18, product.getQuality());
+    }
 }
