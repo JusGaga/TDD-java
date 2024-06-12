@@ -25,4 +25,12 @@ public class ShopTest {
         shop.update(product);
         assertEquals(19, product.getQuality());
     }
+
+    @Test
+    public void testQualityDecreasesTwiceAsFastAfterSellIn() {
+        Product product = new Product("normal", "product", 0, 20);
+        Shop shop = new Shop(List.of(product));
+        shop.update(product);
+        assertEquals(18, product.getQuality());
+    }
 }
