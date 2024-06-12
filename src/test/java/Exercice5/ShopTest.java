@@ -41,4 +41,12 @@ public class ShopTest {
         shop.update(product);
         assertEquals(0, product.getQuality());
     }
+
+    @Test
+    public void testBrieQualityIncreases() {
+        Product product = new Product("brie", "Aged Brie", 10, 20);
+        Shop shop = new Shop(List.of(product));
+        shop.update(product);
+        assertEquals(21, product.getQuality());
+    }
 }
