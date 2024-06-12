@@ -10,6 +10,7 @@ public class Shop {
     }
 
     public void update(Product product) {
-        throw new UnsupportedOperationException("Not implemented yet.");
+        product.setSellIn(product.getSellIn() - 1);
+        product.setQuality(product.getQuality() - 1);
     }
 }
