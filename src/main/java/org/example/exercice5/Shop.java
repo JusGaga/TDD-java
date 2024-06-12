@@ -18,6 +18,10 @@ public class Shop {
             qualityChange = 1;
         }
 
+        if (product.getType().equals("dairy")) {
+            qualityChange = -2;
+        }
+
         if(product.getSellIn() <= 0) {
             qualityChange = -2;
         }
