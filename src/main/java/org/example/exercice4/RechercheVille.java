@@ -17,10 +17,10 @@ public class RechercheVille {
         if (mot.length() < 2){
             throw new NotFoundException("Le texte de recherche doit contenir au moins 2 caractères.");
         }
-        String rechercheMinuscule = mot.toLowerCase();
+        String recherche = mot;
 
         return villes.stream()
-                .filter(ville -> ville.toLowerCase().startsWith(rechercheMinuscule))
+                .filter(ville -> ville.startsWith(recherche))
                 .collect(Collectors.toList());
 
     }

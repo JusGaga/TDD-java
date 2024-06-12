@@ -35,4 +35,11 @@ public class RechercheVilleTest {
         assertTrue(result.contains("Valence"));
         assertTrue(result.contains("Vancouver"));
     }
+
+    @Test
+    public void testRechercheInsensibleALaCasse() {
+        List<String> result = rechercheVille.rechercher("va");
+        assertTrue(result.contains("Valence"));
+        assertTrue(result.contains("Vancouver"));
+    }
 }
