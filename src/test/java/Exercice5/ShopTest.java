@@ -33,4 +33,12 @@ public class ShopTest {
         shop.update(product);
         assertEquals(18, product.getQuality());
     }
+
+    @Test
+    public void testQualityNeverNegative() {
+        Product product = new Product("normal", "product", 10, 0);
+        Shop shop = new Shop(List.of(product));
+        shop.update(product);
+        assertEquals(0, product.getQuality());
+    }
 }
