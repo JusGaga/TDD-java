@@ -10,15 +10,19 @@ public class Shop {
     }
 
     public void update(Product product) {
-        int qualityChange = 1;
+        int qualityChange = -1;
 
         product.setSellIn(product.getSellIn() - 1);
 
-        if(product.getSellIn() <= 0) {
-            qualityChange = 2;
+        if (product.getType().equals("brie")){
+            qualityChange = 1;
         }
 
-        int newQuality = product.getQuality() - qualityChange;
+        if(product.getSellIn() <= 0) {
+            qualityChange = -2;
+        }
+
+        int newQuality = product.getQuality() + qualityChange;
 
         if (newQuality < 0) {
             newQuality = 0;
