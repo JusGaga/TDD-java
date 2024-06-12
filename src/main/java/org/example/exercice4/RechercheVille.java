@@ -3,6 +3,7 @@ package org.example.exercice4;
 import jdk.jshell.spi.ExecutionControl;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RechercheVille {
 
@@ -16,6 +17,11 @@ public class RechercheVille {
         if (mot.length() < 2){
             throw new NotFoundException("Le texte de recherche doit contenir au moins 2 caractères.");
         }
-        throw new UnsupportedOperationException("Not implemented yet");
+        String rechercheMinuscule = mot.toLowerCase();
+
+        return villes.stream()
+                .filter(ville -> ville.toLowerCase().startsWith(rechercheMinuscule))
+                .collect(Collectors.toList());
+
     }
 }
