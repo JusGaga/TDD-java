@@ -28,6 +28,10 @@ public class Shop {
             newQuality = 0;
         }
 
+        if (newQuality > 50) {
+            newQuality = 50;
+        }
+
         product.setQuality(newQuality );
 
     }
