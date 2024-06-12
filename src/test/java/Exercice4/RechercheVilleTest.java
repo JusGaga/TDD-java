@@ -48,4 +48,10 @@ public class RechercheVilleTest {
         List<String> result = rechercheVille.rechercher("ape");
         assertTrue(result.contains("Budapest"));
     }
+
+    @Test
+    public void testRechercheAvecAsterisque() {
+        List<String> result = rechercheVille.rechercher("*");
+        assertEquals(16, result.size());
+    }
 }
