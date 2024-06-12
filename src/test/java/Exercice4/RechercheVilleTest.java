@@ -42,4 +42,10 @@ public class RechercheVilleTest {
         assertTrue(result.contains("Valence"));
         assertTrue(result.contains("Vancouver"));
     }
+
+    @Test
+    public void testRechercheAvecPartieDeNom() {
+        List<String> result = rechercheVille.rechercher("ape");
+        assertTrue(result.contains("Budapest"));
+    }
 }
